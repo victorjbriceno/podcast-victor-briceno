@@ -103,6 +103,10 @@ a {
     padding: 20px;
 }
 
+.header__item:hover {
+    background-image: linear-gradient(#80989b, #8fc2c9);
+}
+
 .bottom {
     display: flex;
     flex-direction: column;
@@ -350,6 +354,10 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+button:hover {
+    background-image: linear-gradient(#248997, #8fc2c9);
 }
 
 footer {
