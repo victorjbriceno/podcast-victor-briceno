@@ -11,32 +11,50 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto&display=swap" rel="stylesheet">
         <!-- CSS BOOTSTRAP -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <!-- Hoja de estilos CSS -->
         <link rel="stylesheet" href="../css/styles.css">
         <title>Contacto - Podcast De Amigos</title>
     </head>
     <body>
         <header> <!-- Encabezado de la página, incluye la barra de navegación y logo -->
-                <nav class="header__nav">
-                    <img class="header__logo" src="../resources/podcast-solid.svg" ref="Icono">        
-                    <ul class="header__list">
-                        <li class="header__item"><a href="../index.html">Inicio</a></li>
-                        <li class="header__item"><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                        <li class="header__item"><a href="proyectos.html">Proyectos</a></li>
-                        <li class="header__item"><a href="patreon.html">Patreon</a></li>
-                        <li class="header__item"><a href="#">Contacto</a></li>
-                    </ul>
-                </nav>
+            <nav class="navbar navbar-expand-lg header">
+                <div class="container-fluid">
+                    <img class="navbar-brand navegacion__logo" src="../resources/podcast-solid.svg" alt="icono">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navegacion__lista">
+                        <li class="nav-item navegacion__item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item navegacion__item">
+                            <a class="nav-link active" aria-current="page" href="sobre-nosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item navegacion__item">
+                            <a class="nav-link active" aria-current="page" href="proyectos.html">Proyectos</a>
+                        </li>
+                        <li class="nav-item navegacion__item">
+                            <a class="nav-link active" aria-current="page" href="patreon.html">Patreon</a>
+                        </li>
+                        <li class="nav-item navegacion__item">
+                            <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </header>
         <main> <!-- Información central de la página que no sea header o footer -->
-                <h1 class="page__title">Contactanos</h1> <!-- Datos de contacto con uso de objetos multimedia -->
+                <h1 class="titulo__pagina">Contactanos</h1> <!-- Datos de contacto con uso de objetos multimedia -->
             <section>
                 <article class="contact__gallery">
                     <img class="contact__img" src="../resources/contact-us.jpg" alt="contact-us-image">
                     <img class="contact__img" src="../resources/mensajito.jpg" alt="mensajito-image">
                     <img class="contact__img" src="../resources/mensaje-celu.jpg" alt="mensaje-desde-celu">
                 </article>
-                <h3 class="page__title">Siguenos en nuestras redes sociales</h3>
+                <h3 class="titulo__pagina">Siguenos en nuestras redes sociales</h3>
                 <article class="contact__redes">
                     <a  href="https://facebook.com/vicjorio"> <img class="contact__anchor" src="../resources/facebook-contact.jpg"></a>
                     <a  href="https://www.instagram.com/vicjorio/"><img class="contact__anchor" src="../resources/insta-contact.jpg"></a>
@@ -63,5 +81,6 @@
             <span class="footer__derechos">Podcast de Amigos (C). Todos los derechos reservados. Año 2022.</span>
         </footer>
         <!-- JAVASCRIPT BOOTSTRAP -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     </body>
 </html>
