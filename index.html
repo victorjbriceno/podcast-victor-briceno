@@ -17,10 +17,10 @@
         <title>Podcast De Amigos</title>
     </head>
     <body>
-        <header> <!-- Encabezado de la página, incluye la barra de navegación y logo -->
+        <header> <!-- Encabezado de la página, incluye la barra de navegación y logo -- Editado y mejorado con Bootstrap -->
             <nav class="navbar navbar-expand-lg header">
                 <div class="container-fluid">
-                    <img class="navbar-brand navegacion__logo" src="resources/podcast-solid.svg" alt="icono">
+                    <a href="#"><img class="navbar-brand navegacion__logo" src="resources/podcast-solid.svg" alt="icono"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -55,7 +55,7 @@
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-inner">
+                <div class="carousel-inner"> <!-- Carousel hecho a base de bootstrap que nos da una facha barabara -->
                     <div class="carousel-item active">
                     <img src="resources/podcast-desk.jpg" class="d-block w-100" alt="Escritorio de Podcast">
                     </div>
@@ -76,8 +76,8 @@
                 </button>
             </div>
             </section>
-            <section class="gallery__container">
-                <h2 class="gallery__title"> ¡Sabemos que necesitabas algo así, ya llegamos!</h2> <!-- Bienvenida al usuario y galería de imagenes alusivas -->
+            <section class="gallery__container"> <!-- Bienvenida al usuario y galería de imagenes alusivas -->
+                <h2 class="gallery__title"> ¡Sabemos que necesitabas algo así, ya llegamos!</h2> 
                 <article class="gallery">
                     <img class="gallery__img" src="resources/podcaster-hombre.jpg" ref="podcaster-hombre">
                     <img class="gallery__img" src="resources/micro-negro.jpg" ref="microfono-negro">
@@ -86,12 +86,7 @@
             </section>
             <section class="bottom">
                 <h2 class=" bottom__son titulo__pagina">El primer podcast hecho por amigos, para amigos</h2> <!-- Podcast de amigos -->
-                <p class="bottom_son">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet excepturi maiores, expedita illum dolorum sed totam, dicta voluptas veritatis cumque, soluta beatae libero autem quia exercitationem aut. Eligendi, quae autem.
-                Corrupti assumenda adipisci quisquam natus quia cupiditate dolorem rem, sunt, soluta atque quaerat id labore doloremque et possimus perferendis eligendi vitae culpa! Aliquam consectetur dolores quia minima sint culpa natus.
-                Corporis libero consectetur reiciendis qui incidunt fugit commodi quibusdam praesentium cum modi iure, eveniet aspernatur itaque sit facere impedit enim laborum tempore veritatis. Ducimus culpa sit quo sed itaque harum.
-                Magni corporis facilis obcaecati porro sunt fuga! Earum voluptatum eveniet expedita itaque suscipit architecto corrupti, ab deleniti repellendus quia quos facilis sapiente ad blanditiis, commodi animi harum. Eveniet, exercitationem dolor?
-                Eum eos laudantium doloribus maxime consequatur! Iste, nemo? Quo, itaque amet doloremque quos suscipit distinctio perspiciatis qui praesentium architecto! Placeat et nemo sapiente repellat illum? Laudantium explicabo aperiam reprehenderit ipsa.
-                </p>
+                <p class="bottom_son">Desde hace mucho tiempo hemos deseado iniciar este proyecto para compartir nuestros puntos de vista y abrir debates sobre temas que quizás dentro de la cotidianeidad no discutimos, y quizás ignoramos, lo ideal sería mostrar que desde puntos de vista distintos podemos llegar a ciertos acuerdos que desenvuelven en un aprendizaje colectivo. Somos amigos, y te hablaremos como tal.</p>
             </section>
         </main>
         <footer> <!-- Pie de página con redes sociales y disclaimer de derechos reservados. -->
@@ -105,14 +100,13 @@
                     <li><a href="pages/contacto.html">Contacto</a></li>
                 </ul>
             </div>
-            <div class="footer__social">
+            <div class="footer__social"> 
                 <a href="https://facebook.com/vicjorio"> <img class="footer__img" src="resources/facebook-square-brands.svg"></a>
                 <a href="https://www.linkedin.com/in/victorjosebriceno/"><img class="footer__img" src="resources/linkedin-brands.svg"></a>
                 <a href="https://www.instagram.com/vicjorio/"><img class="footer__img" src="resources/instagram-square-brands.svg"></a>
             </div>
             <span class="footer__derechos">Podcast de Amigos (C). Todos los derechos reservados. Año 2022.</span>
         </footer>
-
         <!-- JAVASCRIPT BOOTSTRAP -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     </body>

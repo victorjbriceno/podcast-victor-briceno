@@ -20,7 +20,7 @@
         <header> <!-- Encabezado de la página, incluye la barra de navegación y logo -->
             <nav class="navbar navbar-expand-lg header">
                 <div class="container-fluid">
-                    <img class="navbar-brand navegacion__logo" src="../resources/podcast-solid.svg" alt="icono">
+                    <a href="../index.html"><img class="navbar-brand navegacion__logo" src="../resources/podcast-solid.svg" alt="icono"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -47,18 +47,36 @@
             </nav>
         </header>
         <main> <!-- Información central de la página que no sea header o footer -->
-                <h1 class="titulo__pagina">Contactanos</h1> <!-- Datos de contacto con uso de objetos multimedia -->
-            <section>
-                <article class="contact__gallery">
-                    <img class="contact__img" src="../resources/contact-us.jpg" alt="contact-us-image">
-                    <img class="contact__img" src="../resources/mensajito.jpg" alt="mensajito-image">
-                    <img class="contact__img" src="../resources/mensaje-celu.jpg" alt="mensaje-desde-celu">
-                </article>
-                <h3 class="titulo__pagina">Siguenos en nuestras redes sociales</h3>
-                <article class="contact__redes">
-                    <a  href="https://facebook.com/vicjorio"> <img class="contact__anchor" src="../resources/facebook-contact.jpg"></a>
-                    <a  href="https://www.instagram.com/vicjorio/"><img class="contact__anchor" src="../resources/insta-contact.jpg"></a>
-                    <a  href="https://twitter.com/Vicjorio"> <img class="contact__anchor" src="../resources/twitter-contact.jpg"></a>
+            <h1 class="titulo__pagina">Contáctanos</h1>
+            <section class="container-fluid container__margin"> <!-- SECCIÓN "CONTÁCTANOS" -->
+                <article class="row mx-5 mt-3">
+                    <div class="col-xs-12 col-md-12 col-lg-6">
+                        <form>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">Nombre</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">Email</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <label for="floatingPassword">Contraseña</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2">Déjanos tus comentarios</label>
+                            </div>
+                            <div class="d-grid d-md-flex justify-content-evenly">
+                                <button class="btn btn btn btn-secondary" type="submit">Enviar Formulario</button>
+                                <button class="btn btn btn btn-secondary" type="reset">Borrar formulario</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-lg-6">
+                        <img class="img-fluid ocultar" src="../resources/mensaje-celu.jpg" alt="Contactanos">
+                    </div>
                 </article>
             </section>
         </main>
