@@ -35,6 +35,10 @@ a {
     text-decoration: none;
 }
 
+a:visited {
+    color: rgb(119, 0, 255);
+}
+
 /* NAVEGACION  */
 .navegacion__logo {
     width: 48px;
@@ -57,6 +61,7 @@ a {
     background-image: linear-gradient(#80989b, #8fc2c9);
 }
 
+/* CARRUSEL DEL INDEX */
 .carrusel {
     margin: 32px;
 }
@@ -65,9 +70,10 @@ a {
     font-family: 'Lato', sans-serif;
     font-size: 50px;
     text-align: center;
+    margin: 16px;
 }
 
-
+/* GALERIA DEL INDEX */
 .gallery__container {
     display: flex;
     justify-content: center;
@@ -76,6 +82,7 @@ a {
 
 .gallery {
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row-reverse;
     flex-wrap: wrap;
     margin: 15px;
@@ -83,11 +90,13 @@ a {
 
 .gallery__title {
     font-family: 'Lato', sans-serif;
+    padding: 15px;
 }
 
 .gallery__img {
-    width: 30vw;
-    padding: 15px;
+    width: 380px;
+    border: 5px dashed #8fc2c9;
+    margin: 16px;
 }
 
 /* TEXTO DEBAJO DE GALERÍA PAGINA INDEX  */
@@ -125,7 +134,7 @@ a {
                         "microfono-fondo-negro sosteniendo-mic sillas-teatro"
                         "publico-atendiendo sosteniendo-mic clase";
     row-gap: 15px;
-    column-gap: 15px;
+    column-gap: 10px;
     background-color: #80989b;
 }
 
@@ -260,7 +269,7 @@ a {
 
 .patreon__grid { /* GRID DE PAGINA PATREON */
     display: grid;
-    width: 98.9vw;
+    width: 98.5vw;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -420,6 +429,7 @@ footer {
     
     .gallery__img{
         padding: 20px;
+        width: 100%;
     }
 
     /* PROYECTOS GRID */

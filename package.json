@@ -1,0 +1,23 @@
+{
+  "name": "podcast-victor-briceno",
+  "version": "1.0.0",
+  "description": "<h1>Podcast de Amigos - Proyecto CODERHOUSE</h1>\r <p>Este sitio te cuenta un poco más de un proyecto personal sobre un Podcast hecho por amigos, para amigos pensado para completar el curso de Desarrollo Web dictado por CODERHOUSE.</p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorjbriceno/podcast-victor-briceno.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorjbriceno/podcast-victor-briceno/issues"
+  },
+  "homepage": "https://github.com/victorjbriceno/podcast-victor-briceno#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
