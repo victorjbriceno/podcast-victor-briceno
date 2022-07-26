@@ -1,0 +1,621 @@
+* {
+    margin: 0px; /* Margen externo */
+    padding: 0px; /* Margen interno */
+    box-sizing: border-box;
+}
+/* ESTILOS DE MIS SECCIONES PRINCIPALES */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #d2dae2;
+    color: #256e77;
+}
+
+.header {
+    background-color: #80989b;
+    position: sticky;
+    top: 0;
+}
+
+
+p {
+    padding: 0 16px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(119, 0, 255);
+}
+
+/* NAVEGACION  */
+.navegacion__logo {
+    width: 48px;
+}
+
+.navegacion__lista {
+    display: flex;
+    flex-grow: 3;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.navegacion__item {
+    padding: 20px;
+}
+
+.navegacion__item:hover {
+    background-image: linear-gradient(#80989b, #8fc2c9);
+}
+
+/* CARRUSEL DEL INDEX */
+.carrusel {
+    margin: 16px;
+}
+
+.titulo__pagina {
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin: 16px;
+}
+
+/* GALERIA DEL INDEX */
+.gallery__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.gallery__title {
+    font-family: 'Lato', sans-serif;
+    padding: 15px;
+}
+
+.gallery__img {
+    height: auto;
+    width: 350px;
+    border: 1px dashed #8fc2c9;
+    padding: 8px;
+}
+
+/* TEXTO DEBAJO DE GALERÍA PAGINA INDEX  */
+.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.bottom__son {
+    padding: 15px;
+    margin: 30px;
+}
+
+/* PAGINA PROYECTOS PRODUCTOS */
+.productos__texto {
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    color: #0062ff;
+    font-size: 40px;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.productos__grid{ /* GRID DE PAGINA PRODUCTOS/PROYECTOS */
+    display: grid;
+    width: 98vw;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:"microfono-fondo-negro escritorio-pro micro-dorado"
+                        "microfono-fondo-negro sosteniendo-mic sillas-teatro"
+                        "publico-atendiendo sosteniendo-mic clase";
+    row-gap: 15px;
+    column-gap: 10px;
+    background-color: #80989b;
+}
+
+.microfono-fondo-negro {
+    grid-area: microfono-fondo-negro;
+    background-image: url(../resources/microfono-fondo-negro.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.escritorio-pro {
+    grid-area: escritorio-pro;
+    background-image: url(../resources/escritorio-pro.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.micro-dorado {
+    grid-area: micro-dorado;
+    background-image: url(../resources/micro-dorado.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sosteniendo-mic {
+    grid-area: sosteniendo-mic;
+    background-image: url(../resources/sosteniendo-mic.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sillas-teatro {
+    grid-area: sillas-teatro;
+    background-image: url(../resources/sillas-teatro.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.publico-atendiendo {
+    grid-area: publico-atendiendo;
+    background-image: url(../resources/publico-atendiendo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.clase {
+    grid-area: clase;
+    background-image: url(../resources/clase.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.productos__img{
+    width: auto;
+}
+
+/* PAGINA SOBRE NOSOTROS */
+
+.sobre-nosotros__grid{ /* GRID DE PAGINA SOBRE NOSOTROS */
+    display: grid;
+    width: 90vw;
+    height: 180vh;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas:"img-principal tarjeta__uno tarjeta__uno tarjeta__dos tarjeta__dos tarjeta__tres tarjeta__tres"
+                        "img-principal none tarjeta__cuatro tarjeta__cuatro tarjeta__cinco tarjeta__cinco none"
+                        "img-principal tarjeta__seis tarjeta__seis tarjeta__seis tarjeta__seis tarjeta__seis tarjeta__seis";
+    row-gap: 20px;
+    column-gap:30px;
+    margin: 16px;
+    margin-bottom: 36px;
+                    }
+
+.img-principal {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background-image: url(../resources/victor-costanera.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tarjeta__uno {
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+
+.tarjeta__dos {
+    grid-column: 4/6;
+    grid-row: 1/2;
+}
+
+.tarjeta__tres {
+    grid-column: 6/8;
+    grid-row: 1/2;
+}
+
+.tarjeta__cuatro {
+    grid-column: 3/5;
+    grid-row: 2/3;
+}
+
+.tarjeta__cinco {
+    grid-column: 5/7;
+    grid-row: 2/3;
+}
+
+.tarjeta__seis {
+    grid-column: 2/8;
+    grid-row: 3/4;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #0062ff;
+    border: 2px solid rgb(5, 39, 48) ;
+    padding: 30px;
+
+}
+
+/* PAGINA PATREON */
+
+.patreon__grid { /* GRID DE PAGINA PATREON */
+    display: grid;
+    width: 98.5vw;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:"plan-amigos plan-economico plan-pro"
+                        "plan-amigos plan-rich plan-pro"
+                        "plan-amigos plan-empresarial plan-pro";
+    row-gap: 15px;
+    column-gap: 15px;
+    background-color: #80989b;
+}
+
+.plan-amigos {
+    grid-area: plan-amigos;
+    background-image: url(../resources/plan-amigos.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.plan-economico {
+    grid-area: plan-economico;
+    background-image: url(../resources/plan-economico.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.plan-pro {
+    grid-area: plan-pro;
+    background-image: url(../resources/plan-pro.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.plan-empresarial {
+    grid-area: plan-empresarial;
+    background-image: url(../resources/plan-empresarial.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.plan-rich {
+    grid-area: plan-rich;
+    background-image: url(../resources/plan-rich.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.patreon__card {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    color: #0062ff;
+    font-size: 40px;
+    justify-content: center;
+    font-weight: bolder;
+    text-decoration: solid;
+}
+
+button {
+    background-color: #248997;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-image: linear-gradient(#248997, #8fc2c9);
+}
+
+/* PAGINA CONTACTOS */
+
+.container__margin {
+    margin-bottom: 68px;
+} 
+
+footer {
+    display: grid;
+    grid-template-areas: "indice none redes"
+                        "indice none derechos";
+    background-color:#80989b ;
+}
+
+.footer__indice {
+    grid-area: indice;
+}
+
+.footer__indice ul li {
+    font-size: 16px;
+    padding-bottom: 12px;
+}
+
+.footer__social {
+    grid-area: redes;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 10px;
+}
+
+.footer__derechos {
+    display: flex;
+    justify-content: center;
+    grid-area: derechos;
+}
+
+.footer__img {
+    width: 70px;
+    height: 70px;
+    margin-left: 25px;
+}
+
+.contact__gallery {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact__img {
+    width: 30vw;
+}
+
+.contact__redes {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px;
+}
+
+.contact__anchor {
+    width: 30vw;
+}
+
+/* MEDIA QUERY DE CELULAR */
+@media (min-width:320px) and (max-width: 575px) {
+
+    /* NAVEGACION MOBILE */
+    .navegacion__container {
+        flex-direction: column;
+    }
+    .navegacion__lista {
+        flex-direction: column;
+        flex-grow: 0;
+    }
+    /* GALERIA INDEX */
+    .gallery {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .gallery__img{
+        align-items: center;
+        width: 100%;
+    }
+
+    /* PROYECTOS GRID */
+    .productos__grid{
+        height: 200vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas:"microfono-fondo-negro" 
+                            "escritorio-pro" 
+                            "micro-dorado"
+                            "sosteniendo-mic" 
+                            "sillas-teatro"
+                            "publico-atendiendo" 
+                            "clase";
+    }
+
+    
+    /* SOBRE NOSOTROS */
+    .sobre-nosotros__grid{
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+        row-gap: 15px;
+        column-gap: 15px;
+    }
+
+    .img-principal {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+
+    .tarjeta {
+        margin: 15px;
+    }
+
+    .tarjeta__uno {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .tarjeta__dos {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    .tarjeta__tres {
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+
+    .tarjeta__cuatro {
+        grid-column: 1/2;
+        grid-row: 7/8;
+    }
+
+    .tarjeta__cinco {
+        grid-column: 1/2;
+        grid-row: 8/9;
+    }
+
+    .tarjeta__seis {
+        grid-column: 1/2;
+        grid-row: 9/10;
+    }
+
+    /* PATREON GRID */
+    .patreon__grid{
+        width: 100vw;
+        height: 200vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:"plan-amigos"
+                            "plan-rich"
+                            "plan-economico"
+                            "plan-empresarial"
+                            "plan-pro"
+    }
+
+/* CONTACTOS */
+
+.ocultar {
+    display: none;
+}
+
+    .footer__social {
+        grid-area: redes;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin: none;
+    }
+    
+    .footer__derechos {
+        display: flex;
+        justify-content: center;
+        grid-area: derechos;
+    }
+    
+    .footer__img {
+        width: 70px;
+        height: 70px;
+        margin-left: none;
+    }
+    
+}
+
+/* MEDIA QUERY DE TABLET */
+@media (min-width: 576px) and (max-width: 992px) {
+
+    .sobre-nosotros__grid{
+        height: 500vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 20px;
+        column-gap: 20px;
+                        }
+    
+    .img-principal {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+
+    .tarjeta {
+        margin: 15px;
+    }
+    
+    .tarjeta__uno {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    
+    .tarjeta__dos {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    
+    .tarjeta__tres {
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+    
+    .tarjeta__cuatro {
+        grid-column: 1/2;
+        grid-row: 7/8;
+    }
+    
+    .tarjeta__cinco {
+        grid-column: 1/2;
+        grid-row: 8/9;
+    }
+    
+    .tarjeta__seis {
+        grid-column: 1/2;
+        grid-row: 9/10;
+    }
+
+    .productos__grid{
+        width: 100vw;
+        height: 200vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas:"microfono-fondo-negro" 
+                            "escritorio-pro" 
+                            "micro-dorado"
+                            "sosteniendo-mic" 
+                            "sillas-teatro"
+                            "publico-atendiendo" 
+                            "clase";
+    }
+
+    .patreon__grid{
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:"plan-amigos"
+                            "plan-economico"
+                            "plan-rich" 
+                            "plan empresarial"
+                            "plan-pro"
+    }
+
+/* PAGINA CONTACTOS */
+
+.ocultar {
+    display: none;
+}
+}
