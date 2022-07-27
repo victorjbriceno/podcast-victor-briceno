@@ -1,0 +1,205 @@
+/* MEDIA QUERY DE CELULAR */
+@media (min-width:320px) and (max-width: 575px) {
+
+    /* GALERIA INDEX */
+    .gallery{
+        display: flex;
+        flex: wrap;
+    }
+    .gallery__imagenes {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .gallery__img{
+        align-items: center;
+        width: 100%;
+    }
+
+    /* PROYECTOS GRID */
+    .proyectos{
+        height: 200vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas:"microfono-fondo-negro" 
+                            "escritorio-pro" 
+                            "micro-dorado"
+                            "sosteniendo-mic" 
+                            "sillas-teatro"
+                            "publico-atendiendo" 
+                            "clase";
+    }
+
+    
+    /* SOBRE NOSOTROS */
+    .sobre-nosotros__grid{
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+        row-gap: 15px;
+        column-gap: 15px;
+    }
+
+    .img-principal {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+
+    .tarjeta {
+        margin: 15px;
+    }
+
+    .tarjeta__uno {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .tarjeta__dos {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    .tarjeta__tres {
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+
+    .tarjeta__cuatro {
+        grid-column: 1/2;
+        grid-row: 7/8;
+    }
+
+    .tarjeta__cinco {
+        grid-column: 1/2;
+        grid-row: 8/9;
+    }
+
+    .tarjeta__seis {
+        grid-column: 1/2;
+        grid-row: 9/10;
+    }
+
+    /* PATREON GRID */
+    .patreon__grid{
+        width: 100vw;
+        height: 200vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:"plan-amigos"
+                            "plan-rich"
+                            "plan-economico"
+                            "plan-empresarial"
+                            "plan-pro"
+    }
+
+/* CONTACTOS */
+
+.ocultar {
+    display: none;
+}
+
+    .footer__social {
+        grid-area: redes;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin: none;
+    }
+    
+    .footer__derechos {
+        display: flex;
+        justify-content: center;
+        grid-area: derechos;
+    }
+    
+    .footer__img {
+        width: 70px;
+        height: 70px;
+        margin-left: none;
+    }
+    
+}
+
+/* MEDIA QUERY DE TABLET */
+@media (min-width: 576px) and (max-width: 992px) {
+
+    .sobre-nosotros__grid{
+        height: 500vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 20px;
+        column-gap: 20px;
+                        }
+    
+    .img-principal {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+
+    .tarjeta {
+        margin: 15px;
+    }
+    
+    .tarjeta__uno {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    
+    .tarjeta__dos {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    
+    .tarjeta__tres {
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+    
+    .tarjeta__cuatro {
+        grid-column: 1/2;
+        grid-row: 7/8;
+    }
+    
+    .tarjeta__cinco {
+        grid-column: 1/2;
+        grid-row: 8/9;
+    }
+    
+    .tarjeta__seis {
+        grid-column: 1/2;
+        grid-row: 9/10;
+    }
+
+    .proyectos{
+        width: 100vw;
+        height: 200vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas:"microfono-fondo-negro" 
+                            "escritorio-pro" 
+                            "micro-dorado"
+                            "sosteniendo-mic" 
+                            "sillas-teatro"
+                            "publico-atendiendo" 
+                            "clase";
+    }
+
+    .patreon__grid{
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:"plan-amigos"
+                            "plan-economico"
+                            "plan-rich" 
+                            "plan empresarial"
+                            "plan-pro"
+    }
+
+/* PAGINA CONTACTOS */
+
+.ocultar {
+    display: none;
+}
+}
