@@ -16,7 +16,7 @@ main {
 body {
     font-family: 'Roboto', sans-serif;
     background-color: $color-body;
-    color: $color-topbot;
+    color: $color-letras;
 }
 
 
@@ -108,7 +108,9 @@ button {
     
     &__title {
         font-family: 'Lato', sans-serif;
+        font-size: 36px;
         padding: 15px;
+        color: $color-letras;
     }
     
     &__img {
@@ -255,7 +257,7 @@ button {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: #0062ff;
+        color: $color-letras;
         border: 2px solid rgb(5, 39, 48) ;
         padding: 30px;    
         &__uno {

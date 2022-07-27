@@ -3,7 +3,7 @@
     display: grid;
     grid-template-areas: "indice none redes"
                         "indice none derechos";
-    background-color:#80989b ;
+    background-color:$color-topbot;
     &__indice {
         grid-area: indice;
         & ul li {
