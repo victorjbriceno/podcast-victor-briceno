@@ -1,5 +1,27 @@
 @charset "UTF-8";
 /* COLORES PRINCIPALES */
+/* FUENTE DE LETRAS */
+/* NAVEGACION  */
+.navegacion {
+  background-color: #597b80;
+  position: sticky;
+  top: 0; }
+  .navegacion__logo {
+    width: 48px; }
+  .navegacion__lista {
+    display: flex;
+    flex-grow: 3;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap; }
+  .navegacion__item {
+    padding: 20px;
+    font-family: "Francois One", sans-serif;
+    font-size: 16px; }
+    .navegacion__item:hover {
+      background-image: linear-gradient(#597b80, #d2dae2); }
+
 .footer {
   display: grid;
   grid-template-areas: "indice none redes" "indice none derechos";
@@ -8,7 +30,12 @@
     grid-area: indice; }
     .footer__indice ul li {
       font-size: 16px;
-      padding-bottom: 12px; }
+      padding-bottom: 12px;
+      font-family: "Roboto", sans-serif; }
+  .footer__title {
+    font-family: "Francois One", sans-serif;
+    font-size: 36px;
+    margin-left: 16px; }
   .footer__social {
     grid-area: redes;
     display: flex;
@@ -18,11 +45,24 @@
   .footer__derechos {
     display: flex;
     justify-content: center;
-    grid-area: derechos; }
+    grid-area: derechos;
+    font-family: "Roboto", sans-serif; }
   .footer__img {
     width: 70px;
     height: 70px;
     margin-left: 25px; }
+
+/* EXTENDS */
+.background-centrado, .proyectos .microfono-fondo-negro, .proyectos .escritorio-pro, .proyectos .micro-dorado, .proyectos .sosteniendo-mic, .proyectos .sillas-teatro, .proyectos .publico-atendiendo, .proyectos .clase, .sobre-nosotros__grid .img-principal, .patreon__grid .plan-amigos, .patreon__grid .plan-economico, .patreon__grid .plan-pro, .patreon__grid .plan-empresarial, .patreon__grid .plan-rich {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.letras-colorespatreondif, .patreon__grid .patreon__titulo--amigos, .patreon__grid .patreon__titulo--pro {
+  font-family: "Francois One", sans-serif;
+  color: #e6f8f2;
+  font-size: 55px;
+  font-weight: bold; }
 
 * {
   margin: 0px;
@@ -38,7 +78,7 @@ main {
   flex-direction: column; }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #d2dae2;
   color: #00383f; }
 
@@ -67,31 +107,12 @@ button {
   button:hover {
     background-image: linear-gradient(#597b80, #d2dae2); }
 
-/* NAVEGACION  */
-.navegacion {
-  background-color: #597b80;
-  position: sticky;
-  top: 0; }
-  .navegacion__logo {
-    width: 48px; }
-  .navegacion__lista {
-    display: flex;
-    flex-grow: 3;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-    flex-wrap: wrap; }
-  .navegacion__item {
-    padding: 20px; }
-    .navegacion__item:hover {
-      background-image: linear-gradient(#597b80, #d2dae2); }
-
 /* CARRUSEL DEL INDEX */
 .carrusel {
   margin: 16px; }
 
 .titulo__pagina {
-  font-family: 'Lato', sans-serif;
+  font-family: "Francois One", sans-serif;
   font-size: 50px;
   text-align: center;
   margin: 16px; }
@@ -107,7 +128,7 @@ button {
     flex-direction: row-reverse;
     flex-wrap: wrap; }
   .gallery__title {
-    font-family: 'Lato', sans-serif;
+    font-family: "Francois One", sans-serif;
     font-size: 36px;
     padding: 15px;
     color: #00383f; }
@@ -124,7 +145,8 @@ button {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 30px; }
+  margin: 30px;
+  margin-bottom: 68px; }
   .bottom__son {
     padding: 15px;
     margin: 30px; }
@@ -135,6 +157,7 @@ button {
   display: grid;
   width: 98.5vw;
   height: 100vh;
+  margin-bottom: 68px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "microfono-fondo-negro escritorio-pro micro-dorado" "microfono-fondo-negro sosteniendo-mic sillas-teatro" "publico-atendiendo sosteniendo-mic clase";
@@ -143,8 +166,8 @@ button {
   background-color: #597b80; }
   .proyectos__texto {
     display: flex;
-    font-family: 'Lato', sans-serif;
-    color: #0062ff;
+    font-family: "Francois One", sans-serif;
+    color: #e6f8f2;
     font-size: 40px;
     justify-content: center;
     font-weight: bold; }
@@ -152,46 +175,25 @@ button {
     width: auto; }
   .proyectos .microfono-fondo-negro {
     grid-area: microfono-fondo-negro;
-    background-image: url(../resources/microfono-fondo-negro.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-image: url(../resources/microfono-fondo-negro.jpg); }
   .proyectos .escritorio-pro {
     grid-area: escritorio-pro;
-    background-image: url(../resources/escritorio-pro.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-image: url(../resources/escritorio-pro.jpg); }
   .proyectos .micro-dorado {
     grid-area: micro-dorado;
-    background-image: url(../resources/micro-dorado.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-image: url(../resources/micro-dorado.jpg); }
   .proyectos .sosteniendo-mic {
     grid-area: sosteniendo-mic;
-    background-image: url(../resources/sosteniendo-mic.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-image: url(../resources/sosteniendo-mic.jpg); }
   .proyectos .sillas-teatro {
     grid-area: sillas-teatro;
-    background-image: url(../resources/sillas-teatro.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-image: url(../resources/sillas-teatro.jpg); }
   .proyectos .publico-atendiendo {
     grid-area: publico-atendiendo;
-    background-image: url(../resources/publico-atendiendo.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-image: url(../resources/publico-atendiendo.jpg); }
   .proyectos .clase {
     grid-area: clase;
-    background-image: url(../resources/clase.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-image: url(../resources/clase.jpg); }
 
 /* PAGINA SOBRE NOSOTROS */
 .sobre-nosotros__grid {
@@ -205,21 +207,21 @@ button {
   row-gap: 20px;
   column-gap: 30px;
   margin: 16px;
-  margin-bottom: 36px; }
+  margin-bottom: 68px; }
   .sobre-nosotros__grid .img-principal {
     grid-column: 1/2;
     grid-row: 1/4;
     background-image: url(../resources/victor-costanera.jpeg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    border: 2px solid black; }
   .sobre-nosotros__grid .tarjeta {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #00383f;
-    border: 2px solid #052730;
+    font-family: "Roboto", sans-serif;
+    color: #e6f8f2;
+    background-color: #597b80;
+    border: 2px solid black;
     padding: 30px; }
     .sobre-nosotros__grid .tarjeta__uno {
       grid-column: 2/4;
@@ -239,6 +241,9 @@ button {
     .sobre-nosotros__grid .tarjeta__seis {
       grid-column: 2/8;
       grid-row: 3/4; }
+    .sobre-nosotros__grid .tarjeta__titulo {
+      font-family: "Francois One", sans-serif;
+      text-align: center; }
 
 /* PAGINA PATREON */
 .patreon__grid {
@@ -251,46 +256,51 @@ button {
   grid-template-areas: "plan-amigos plan-economico plan-pro" "plan-amigos plan-rich plan-pro" "plan-amigos plan-empresarial plan-pro";
   row-gap: 15px;
   column-gap: 15px;
-  background-color: #80989b; }
+  background-color: #80989b;
+  margin-bottom: 68px; }
   .patreon__grid .plan-amigos {
     grid-area: plan-amigos;
-    background-image: url(../resources/plan-amigos.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-image: url(../resources/plan-amigos.jpg); }
   .patreon__grid .plan-economico {
     grid-area: plan-economico;
-    background-image: url(../resources/plan-economico.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-image: url(../resources/plan-economico.jpg); }
   .patreon__grid .plan-pro {
     grid-area: plan-pro;
-    background-image: url(../resources/plan-pro.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-image: url(../resources/plan-pro.jpg); }
   .patreon__grid .plan-empresarial {
     grid-area: plan-empresarial;
-    background-image: url(../resources/plan-empresarial.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-image: url(../resources/plan-empresarial.jpg); }
   .patreon__grid .plan-rich {
     grid-area: plan-rich;
-    background-image: url(../resources/plan-rich.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-image: url(../resources/plan-rich.jpg); }
   .patreon__grid .patreon__card {
     display: flex;
     flex-direction: column;
-    font-family: 'Lato', sans-serif;
-    color: #0062ff;
-    font-size: 40px;
-    justify-content: center;
     font-weight: bolder;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
     text-decoration: solid; }
+  .patreon__grid .patreon__button {
+    width: 50%;
+    font-family: "Francois One", sans-serif;
+    color: #e6f8f2;
+    font-weight: bold; }
+  .patreon__grid .patreon__button--amigos {
+    width: 50%;
+    font-family: "Francois One", sans-serif;
+    color: #00383f;
+    font-weight: bold; }
+  .patreon__grid .patreon__button--pro {
+    width: 50%;
+    font-family: "Francois One", sans-serif;
+    color: #00383f;
+    font-weight: bold; }
+  .patreon__grid .patreon__titulo {
+    font-family: "Francois One", sans-serif;
+    color: #00383f;
+    font-size: 55px;
+    font-weight: bold; }
 
 /* PAGINA CONTACTOS */
 .container__margin {

@@ -1,0 +1,15 @@
+
+/* EXTENDS */
+
+.background-centrado {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.letras-colorespatreondif {
+    font-family: $letra-titulos;
+    color: $color-grids;
+    font-size: 55px;
+    font-weight: bold;
+}

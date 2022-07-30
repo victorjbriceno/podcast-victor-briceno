@@ -9,7 +9,14 @@
         & ul li {
             font-size: 16px;
             padding-bottom: 12px;
+            font-family: $letra-contenido;
         }
+    }
+
+    &__title{
+        font-family: $letra-titulos;
+        font-size: 36px;
+        margin-left: 16px;
     }
     
     &__social {
@@ -24,6 +31,7 @@
         display: flex;
         justify-content: center;
         grid-area: derechos;
+        font-family: $letra-contenido;
     }
     
     &__img {

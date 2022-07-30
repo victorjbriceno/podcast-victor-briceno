@@ -1,5 +1,7 @@
 @import "variables";
+@import "nav";
 @import "footer";
+@import "operators";
 
 * {
     margin: 0px; /* Margen externo */
@@ -14,7 +16,7 @@ main {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: $letra-contenido;
     background-color: $color-body;
     color: $color-letras;
 }
@@ -52,35 +54,6 @@ button {
 }
 
 
-/* NAVEGACION  */
-
-.navegacion {
-    background-color: $color-topbot;
-    position: sticky;
-    top: 0;
-    &__logo {
-        width: 48px;
-    }
-    
-    &__lista {
-        display: flex;
-        flex-grow: 3;
-        justify-content: flex-end;
-        align-items: center;
-        list-style: none;
-        flex-wrap: wrap;
-    }
-    
-    &__item {
-        padding: 20px;
-        &:hover {
-            background-image: linear-gradient($color-topbot, $color-body);
-        }
-    }
-    
-
-}
-
 
 /* CARRUSEL DEL INDEX */
 .carrusel {
@@ -88,7 +61,7 @@ button {
 }
 
 .titulo__pagina {
-    font-family: 'Lato', sans-serif;
+    font-family: $letra-titulos;
     font-size: 50px;
     text-align: center;
     margin: 16px;
@@ -107,7 +80,7 @@ button {
     }
     
     &__title {
-        font-family: 'Lato', sans-serif;
+        font-family: $letra-titulos;
         font-size: 36px;
         padding: 15px;
         color: $color-letras;
@@ -131,6 +104,7 @@ button {
     align-items: center;
     flex-wrap: wrap;
     margin: 30px;
+    margin-bottom: 68px;
     &__son {
         padding: 15px;
         margin: 30px;
@@ -146,6 +120,7 @@ button {
     display: grid;
     width: 98.5vw;
     height: 100vh;
+    margin-bottom: 68px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:"microfono-fondo-negro escritorio-pro micro-dorado"
@@ -156,8 +131,8 @@ button {
     background-color: $color-topbot;
     &__texto {
         display: flex;
-        font-family: 'Lato', sans-serif;
-        color: #0062ff;
+        font-family: $letra-titulos;
+        color: $color-grids;
         font-size: 40px;
         justify-content: center;
         font-weight: bold;
@@ -169,57 +144,43 @@ button {
     .microfono-fondo-negro {
         grid-area: microfono-fondo-negro;
         background-image: url(../resources/microfono-fondo-negro.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .background-centrado;
     }
     
     .escritorio-pro {
         grid-area: escritorio-pro;
         background-image: url(../resources/escritorio-pro.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .background-centrado;
     }
     
     .micro-dorado {
         grid-area: micro-dorado;
         background-image: url(../resources/micro-dorado.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .background-centrado;
     }
     
     .sosteniendo-mic {
         grid-area: sosteniendo-mic;
         background-image: url(../resources/sosteniendo-mic.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .background-centrado;
     }
     
     .sillas-teatro {
         grid-area: sillas-teatro;
         background-image: url(../resources/sillas-teatro.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .background-centrado;
     }
     
     .publico-atendiendo {
         grid-area: publico-atendiendo;
         background-image: url(../resources/publico-atendiendo.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .background-centrado;
     }
     
     .clase {
         grid-area: clase;
         background-image: url(../resources/clase.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .background-centrado;
     }
 }
 
@@ -240,14 +201,13 @@ button {
     row-gap: 20px;
     column-gap:30px;
     margin: 16px;
-    margin-bottom: 36px;
+    margin-bottom: 68px;
     .img-principal {
         grid-column: 1/2;
         grid-row: 1/4;
         background-image: url(../resources/victor-costanera.jpeg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        border: 2px solid black;
+        @extend .background-centrado;
     }
     
 
@@ -257,8 +217,10 @@ button {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: $color-letras;
-        border: 2px solid rgb(5, 39, 48) ;
+        font-family: $letra-contenido;
+        color: $color-grids;
+        background-color: $color-topbot;
+        border: 2px solid black;
         padding: 30px;    
         &__uno {
             grid-column: 2/4;
@@ -289,7 +251,11 @@ button {
             grid-column: 2/8;
             grid-row: 3/4;
         }
-    
+        
+        &__titulo{
+            font-family: $letra-titulos;
+            text-align: center;
+        }
     }
                     }
 
@@ -309,56 +275,80 @@ button {
     row-gap: 15px;
     column-gap: 15px;
     background-color: #80989b;
+    margin-bottom: 68px;
     .plan-amigos {
         grid-area: plan-amigos;
         background-image: url(../resources/plan-amigos.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .background-centrado;
     }
     
     .plan-economico {
         grid-area: plan-economico;
         background-image: url(../resources/plan-economico.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .background-centrado;
     }
     
     .plan-pro {
         grid-area: plan-pro;
         background-image: url(../resources/plan-pro.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .background-centrado;
     }
     
     .plan-empresarial {
         grid-area: plan-empresarial;
         background-image: url(../resources/plan-empresarial.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .background-centrado;
     }
     
     .plan-rich {
         grid-area: plan-rich;
         background-image: url(../resources/plan-rich.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @extend .background-centrado;
     }
     
     .patreon__card {
         display: flex;
         flex-direction: column;
-        font-family: 'Lato', sans-serif;
-        color: #0062ff;
-        font-size: 40px;
-        justify-content: center;
         font-weight: bolder;
+        justify-content: flex-end;
+        align-items: center;
+        font-weight: bold;
         text-decoration: solid;
     } 
+
+    .patreon__button {
+        width: 50%;
+        font-family: $letra-titulos;
+        color: $color-grids;
+        font-weight: bold;
+    }
+
+    .patreon__button--amigos {
+        width: 50%;
+        font-family: $letra-titulos;
+        color: $color-letras;
+        font-weight: bold;
+    }
+
+    .patreon__button--pro {
+        width: 50%;
+        font-family: $letra-titulos;
+        color: $color-letras;
+        font-weight: bold;
+    }
+
+    .patreon__titulo {
+        font-family: $letra-titulos;
+        color: $color-letras;
+        font-size: 55px;
+        font-weight: bold;
+    }
+    .patreon__titulo--amigos{
+        @extend .letras-colorespatreondif;
+    }
+    .patreon__titulo--pro{
+        @extend .letras-colorespatreondif;
+    }
 }
 
 /* PAGINA CONTACTOS */
