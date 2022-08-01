@@ -1,5 +1,5 @@
 
-/* EXTENDS */
+/* EXTENDS - GRID BACKGROUN-IMAGES */
 
 .background-centrado {
     background-position: center;
@@ -12,4 +12,13 @@
     color: $color-grids;
     font-size: 55px;
     font-weight: bold;
+}
+
+/* MIXIN - FLEX */
+
+@mixin flexing ($flex-direction, $wrap, $justify, $align){
+    flex-direction: $flex-direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
 }

@@ -1,7 +1,8 @@
 @import "variables";
+@import "operators";
 @import "nav";
 @import "footer";
-@import "operators";
+
 
 * {
     margin: 0px; /* Margen externo */
@@ -11,8 +12,7 @@
 /* ESTILOS DE MIS SECCIONES PRINCIPALES */
 main {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    @include flexing (column, wrap, none, none);
 }
 
 body {
@@ -70,13 +70,10 @@ button {
 /* GALERIA DEL INDEX */
 .gallery {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include flexing (none, wrap, center, none);
     &__imagenes {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
+    @include flexing (row-reverse, wrap, space-between, none);
     }
     
     &__title {
@@ -99,11 +96,7 @@ button {
 /* TEXTO DEBAJO DE GALERÍA PAGINA INDEX  */
 .bottom {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 30px;
+    @include flexing (column, wrap, center, center);
     margin-bottom: 68px;
     &__son {
         padding: 15px;
@@ -136,6 +129,7 @@ button {
         font-size: 40px;
         justify-content: center;
         font-weight: bold;
+        text-align: center;
     }
     &__img{
         width: auto;
@@ -195,9 +189,6 @@ button {
     height: 180vh;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 2fr 2fr;
-    grid-template-areas:"img-principal tarjeta__uno tarjeta__uno tarjeta__dos tarjeta__dos tarjeta__tres tarjeta__tres"
-                        "img-principal none tarjeta__cuatro tarjeta__cuatro tarjeta__cinco tarjeta__cinco none"
-                        "img-principal tarjeta__seis tarjeta__seis tarjeta__seis tarjeta__seis tarjeta__seis tarjeta__seis";
     row-gap: 20px;
     column-gap:30px;
     margin: 16px;
@@ -214,48 +205,46 @@ button {
     
     .tarjeta {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flexing (column, wrap, center, center);
         font-family: $letra-contenido;
         color: $color-grids;
         background-color: $color-topbot;
         border: 2px solid black;
         padding: 30px;    
-        &__uno {
-            grid-column: 2/4;
-            grid-row: 1/2;
-        }
-        
-        &__dos {
-            grid-column: 4/6;
-            grid-row: 1/2;
-        }
-        
-        &__tres {
-            grid-column: 6/8;
-            grid-row: 1/2;
-        }
-        
-        &__cuatro {
-            grid-column: 3/5;
-            grid-row: 2/3;
-        }
-        
-        &__cinco {
-            grid-column: 5/7;
-            grid-row: 2/3;
-        }
-        
-        &__seis {
-            grid-column: 2/8;
-            grid-row: 3/4;
-        }
-        
-        &__titulo{
-            font-family: $letra-titulos;
-            text-align: center;
-        }
+    }
+    .tarjeta__uno {
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+    
+    .tarjeta__dos {
+        grid-column: 4/6;
+        grid-row: 1/2;
+    }
+    
+    .tarjeta__tres {
+        grid-column: 6/8;
+        grid-row: 1/2;
+    }
+    
+    .tarjeta__cuatro {
+        grid-column: 3/5;
+        grid-row: 2/3;
+    }
+    
+    .tarjeta__cinco {
+        grid-column: 5/7;
+        grid-row: 2/3;
+    }
+    
+    .tarjeta__seis {
+        grid-column: 2/8;
+        grid-row: 3/4;
+    }
+    
+    .tarjeta__titulo{
+        font-family: $letra-titulos;
+        text-align: center;
     }
                     }
 
@@ -308,12 +297,10 @@ button {
     
     .patreon__card {
         display: flex;
-        flex-direction: column;
-        font-weight: bolder;
-        justify-content: flex-end;
-        align-items: center;
+        @include flexing (column, none, flex-end, center);
         font-weight: bold;
         text-decoration: solid;
+        text-align: center;
     } 
 
     .patreon__button {

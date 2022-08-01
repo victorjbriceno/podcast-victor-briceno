@@ -1,6 +1,19 @@
 @charset "UTF-8";
 /* COLORES PRINCIPALES */
 /* FUENTE DE LETRAS */
+/* EXTENDS - GRID BACKGROUN-IMAGES */
+.background-centrado, .proyectos .microfono-fondo-negro, .proyectos .escritorio-pro, .proyectos .micro-dorado, .proyectos .sosteniendo-mic, .proyectos .sillas-teatro, .proyectos .publico-atendiendo, .proyectos .clase, .sobre-nosotros__grid .img-principal, .patreon__grid .plan-amigos, .patreon__grid .plan-economico, .patreon__grid .plan-pro, .patreon__grid .plan-empresarial, .patreon__grid .plan-rich {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.letras-colorespatreondif, .patreon__grid .patreon__titulo--amigos, .patreon__grid .patreon__titulo--pro {
+  font-family: "Francois One", sans-serif;
+  color: #e6f8f2;
+  font-size: 55px;
+  font-weight: bold; }
+
+/* MIXIN - FLEX */
 /* NAVEGACION  */
 .navegacion {
   background-color: #597b80;
@@ -24,7 +37,7 @@
 
 .footer {
   display: grid;
-  grid-template-areas: "indice none redes" "indice none derechos";
+  grid-template-areas: "indice none redes" "indice none derechos";
   background-color: #597b80; }
   .footer__indice {
     grid-area: indice; }
@@ -52,18 +65,6 @@
     height: 70px;
     margin-left: 25px; }
 
-/* EXTENDS */
-.background-centrado, .proyectos .microfono-fondo-negro, .proyectos .escritorio-pro, .proyectos .micro-dorado, .proyectos .sosteniendo-mic, .proyectos .sillas-teatro, .proyectos .publico-atendiendo, .proyectos .clase, .sobre-nosotros__grid .img-principal, .patreon__grid .plan-amigos, .patreon__grid .plan-economico, .patreon__grid .plan-pro, .patreon__grid .plan-empresarial, .patreon__grid .plan-rich {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.letras-colorespatreondif, .patreon__grid .patreon__titulo--amigos, .patreon__grid .patreon__titulo--pro {
-  font-family: "Francois One", sans-serif;
-  color: #e6f8f2;
-  font-size: 55px;
-  font-weight: bold; }
-
 * {
   margin: 0px;
   /* Margen externo */
@@ -74,8 +75,10 @@
 /* ESTILOS DE MIS SECCIONES PRINCIPALES */
 main {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  flex-direction: column; }
+  justify-content: none;
+  align-items: none; }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -120,13 +123,16 @@ button {
 /* GALERIA DEL INDEX */
 .gallery {
   display: flex;
+  flex-direction: none;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  align-items: none; }
   .gallery__imagenes {
     display: flex;
-    justify-content: space-between;
     flex-direction: row-reverse;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: none; }
   .gallery__title {
     font-family: "Francois One", sans-serif;
     font-size: 36px;
@@ -142,10 +148,9 @@ button {
 .bottom {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  margin: 30px;
   margin-bottom: 68px; }
   .bottom__son {
     padding: 15px;
@@ -160,7 +165,7 @@ button {
   margin-bottom: 68px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "microfono-fondo-negro escritorio-pro micro-dorado" "microfono-fondo-negro sosteniendo-mic sillas-teatro" "publico-atendiendo sosteniendo-mic clase";
+  grid-template-areas: "microfono-fondo-negro escritorio-pro micro-dorado" "microfono-fondo-negro sosteniendo-mic sillas-teatro" "publico-atendiendo sosteniendo-mic clase";
   row-gap: 16px;
   column-gap: 24px;
   background-color: #597b80; }
@@ -170,7 +175,8 @@ button {
     color: #e6f8f2;
     font-size: 40px;
     justify-content: center;
-    font-weight: bold; }
+    font-weight: bold;
+    text-align: center; }
   .proyectos__img {
     width: auto; }
   .proyectos .microfono-fondo-negro {
@@ -203,7 +209,6 @@ button {
   height: 180vh;
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 2fr 2fr;
-  grid-template-areas: "img-principal tarjeta__uno tarjeta__uno tarjeta__dos tarjeta__dos tarjeta__tres tarjeta__tres" "img-principal none tarjeta__cuatro tarjeta__cuatro tarjeta__cinco tarjeta__cinco none" "img-principal tarjeta__seis tarjeta__seis tarjeta__seis tarjeta__seis tarjeta__seis tarjeta__seis";
   row-gap: 20px;
   column-gap: 30px;
   margin: 16px;
@@ -216,6 +221,7 @@ button {
   .sobre-nosotros__grid .tarjeta {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     font-family: "Roboto", sans-serif;
@@ -223,27 +229,27 @@ button {
     background-color: #597b80;
     border: 2px solid black;
     padding: 30px; }
-    .sobre-nosotros__grid .tarjeta__uno {
-      grid-column: 2/4;
-      grid-row: 1/2; }
-    .sobre-nosotros__grid .tarjeta__dos {
-      grid-column: 4/6;
-      grid-row: 1/2; }
-    .sobre-nosotros__grid .tarjeta__tres {
-      grid-column: 6/8;
-      grid-row: 1/2; }
-    .sobre-nosotros__grid .tarjeta__cuatro {
-      grid-column: 3/5;
-      grid-row: 2/3; }
-    .sobre-nosotros__grid .tarjeta__cinco {
-      grid-column: 5/7;
-      grid-row: 2/3; }
-    .sobre-nosotros__grid .tarjeta__seis {
-      grid-column: 2/8;
-      grid-row: 3/4; }
-    .sobre-nosotros__grid .tarjeta__titulo {
-      font-family: "Francois One", sans-serif;
-      text-align: center; }
+  .sobre-nosotros__grid .tarjeta__uno {
+    grid-column: 2/4;
+    grid-row: 1/2; }
+  .sobre-nosotros__grid .tarjeta__dos {
+    grid-column: 4/6;
+    grid-row: 1/2; }
+  .sobre-nosotros__grid .tarjeta__tres {
+    grid-column: 6/8;
+    grid-row: 1/2; }
+  .sobre-nosotros__grid .tarjeta__cuatro {
+    grid-column: 3/5;
+    grid-row: 2/3; }
+  .sobre-nosotros__grid .tarjeta__cinco {
+    grid-column: 5/7;
+    grid-row: 2/3; }
+  .sobre-nosotros__grid .tarjeta__seis {
+    grid-column: 2/8;
+    grid-row: 3/4; }
+  .sobre-nosotros__grid .tarjeta__titulo {
+    font-family: "Francois One", sans-serif;
+    text-align: center; }
 
 /* PAGINA PATREON */
 .patreon__grid {
@@ -253,7 +259,7 @@ button {
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "plan-amigos plan-economico plan-pro" "plan-amigos plan-rich plan-pro" "plan-amigos plan-empresarial plan-pro";
+  grid-template-areas: "plan-amigos plan-economico plan-pro" "plan-amigos plan-rich plan-pro" "plan-amigos plan-empresarial plan-pro";
   row-gap: 15px;
   column-gap: 15px;
   background-color: #80989b;
@@ -276,11 +282,12 @@ button {
   .patreon__grid .patreon__card {
     display: flex;
     flex-direction: column;
-    font-weight: bolder;
+    flex-wrap: none;
     justify-content: flex-end;
     align-items: center;
     font-weight: bold;
-    text-decoration: solid; }
+    text-decoration: solid;
+    text-align: center; }
   .patreon__grid .patreon__button {
     width: 50%;
     font-family: "Francois One", sans-serif;
@@ -320,10 +327,10 @@ button {
     width: 100%; }
   /* PROYECTOS GRID */
   .proyectos {
-    height: 200vh;
+    height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, 1fr);
-    grid-template-areas: "microfono-fondo-negro"  "escritorio-pro"  "micro-dorado" "sosteniendo-mic"  "sillas-teatro" "publico-atendiendo"  "clase"; }
+    grid-template-areas: "microfono-fondo-negro"  "escritorio-pro"  "micro-dorado" "sosteniendo-mic"  "sillas-teatro" "publico-atendiendo"  "clase"; }
   /* SOBRE NOSOTROS */
   .sobre-nosotros__grid {
     height: auto;
@@ -331,36 +338,36 @@ button {
     grid-template-rows: repeat(9, 1fr);
     row-gap: 15px;
     column-gap: 15px; }
-  .img-principal {
-    grid-column: 1/2;
-    grid-row: 1/4; }
-  .tarjeta {
-    margin: 15px; }
-  .tarjeta__uno {
-    grid-column: 1/2;
-    grid-row: 4/5; }
-  .tarjeta__dos {
-    grid-column: 1/2;
-    grid-row: 5/6; }
-  .tarjeta__tres {
-    grid-column: 1/2;
-    grid-row: 6/7; }
-  .tarjeta__cuatro {
-    grid-column: 1/2;
-    grid-row: 7/8; }
-  .tarjeta__cinco {
-    grid-column: 1/2;
-    grid-row: 8/9; }
-  .tarjeta__seis {
-    grid-column: 1/2;
-    grid-row: 9/10; }
+    .sobre-nosotros__grid .img-principal {
+      grid-column: 1/2;
+      grid-row: 1/4; }
+    .sobre-nosotros__grid .tarjeta {
+      margin: 15px; }
+    .sobre-nosotros__grid .tarjeta__uno {
+      grid-column: 1/2;
+      grid-row: 4/5; }
+    .sobre-nosotros__grid .tarjeta__dos {
+      grid-column: 1/2;
+      grid-row: 5/6; }
+    .sobre-nosotros__grid .tarjeta__tres {
+      grid-column: 1/2;
+      grid-row: 6/7; }
+    .sobre-nosotros__grid .tarjeta__cuatro {
+      grid-column: 1/2;
+      grid-row: 7/8; }
+    .sobre-nosotros__grid .tarjeta__cinco {
+      grid-column: 1/2;
+      grid-row: 8/9; }
+    .sobre-nosotros__grid .tarjeta__seis {
+      grid-column: 1/2;
+      grid-row: 9/10; }
   /* PATREON GRID */
   .patreon__grid {
     width: 100vw;
-    height: 200vh;
+    height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr);
-    grid-template-areas: "plan-amigos" "plan-rich" "plan-economico" "plan-empresarial" "plan-pro"; }
+    grid-template-areas: "plan-amigos" "plan-rich" "plan-economico" "plan-empresarial" "plan-pro"; }
   /* CONTACTOS */
   .ocultar {
     display: none; }
@@ -383,7 +390,7 @@ button {
 /* MEDIA QUERY DE TABLET */
 @media (min-width: 576px) and (max-width: 992px) {
   .sobre-nosotros__grid {
-    height: 500vw;
+    height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     row-gap: 20px;
@@ -416,13 +423,13 @@ button {
     height: 200vh;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, 1fr);
-    grid-template-areas: "microfono-fondo-negro"  "escritorio-pro"  "micro-dorado" "sosteniendo-mic"  "sillas-teatro" "publico-atendiendo"  "clase"; }
+    grid-template-areas: "microfono-fondo-negro"  "escritorio-pro"  "micro-dorado" "sosteniendo-mic"  "sillas-teatro" "publico-atendiendo"  "clase"; }
   .patreon__grid {
     width: 100vw;
     height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "plan-amigos" "plan-economico" "plan-rich"  "plan empresarial" "plan-pro"; }
+    grid-template-areas: "plan-amigos" "plan-economico" "plan-rich"  "plan empresarial" "plan-pro"; }
   /* PAGINA CONTACTOS */
   .ocultar {
     display: none; } }
