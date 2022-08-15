@@ -327,7 +327,8 @@ button {
     width: 100%; }
   /* PROYECTOS GRID */
   .proyectos {
-    height: auto;
+    width: 100vw;
+    height: 200vh;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, 1fr);
     grid-template-areas: "microfono-fondo-negro"  "escritorio-pro"  "micro-dorado" "sosteniendo-mic"  "sillas-teatro" "publico-atendiendo"  "clase"; }
